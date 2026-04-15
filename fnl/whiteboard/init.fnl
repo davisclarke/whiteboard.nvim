@@ -89,12 +89,12 @@
 
 ;; palette
 
-(local palette {:bg "#ffffff"
-                :base01 "#e0e0e0"
-                :base02 "#cecece"
+(local palette {:bg "#f5f0e0"
+                :base01 "#d5c9b9"
+                :base02 "#b5a999"
                 :fg "#000000"
-                :base04 "#37474F"
-                :base05 "#808080"
+                :base04 "#554939"
+                :base05 "#554939"
                 :base06 "#525252"
                 :cyan "#267459"
                 ;#540063
@@ -102,13 +102,13 @@
                 ;;197c70
                 :magenta "#A02a9a"
                 :red "#A80011"
-                :yellow "#864f00"
+                :yellow "#986908"
                 :blue "#0f428e"
                 :purple "#5a1083"
                 :green "#107300"
                 :orange "#d65100"
                 :pink "#d446bb"
-                :blend "#FAFAFA"
+                :blend "#d5c9b9"
                 :none :NONE})
 
 ; WIP Dark theme
@@ -355,7 +355,7 @@
 
 ;; window
 
-(custom-set-face! :Title [] {:fg palette.base04 :bg palette.none})
+(custom-set-face! :Title [:bold] {:fg palette.green :bg palette.none})
 ;; VertSplit has been replaced by `WinSpeperator` in nvim 0.10
 (custom-set-face! :VertSplit [] {:fg palette.base01 :bg palette.bg})
 (custom-set-face! :WinSeparator [] {:fg palette.base01 :bg palette.bg})
@@ -377,7 +377,7 @@
 (custom-set-face! :Function [] {:fg palette.green :bg palette.none})
 (custom-set-face! :Identifier [] {:fg palette.base04 :bg palette.none})
 (custom-set-face! :Include [] {:fg palette.red :bg palette.none})
-(custom-set-face! :Keyword [:bold] {:fg palette.orange :bg palette.none})
+(custom-set-face! :Keyword [] {:fg palette.red :bg palette.none})
 (custom-set-face! :Label [] {:fg palette.red :bg palette.none})
 (custom-set-face! :Number [] {:fg palette.magenta :bg palette.none})
 (custom-set-face! :Operator [:bold] {:fg palette.orange :bg palette.none})
@@ -545,8 +545,8 @@
 
 ;;; keywords
 
-(custom-set-face! "@keyword" [:bold] {:fg palette.red :bg palette.none})
-(custom-set-face! "@keyword.function" [:bold]
+(custom-set-face! "@keyword" [] {:fg palette.red :bg palette.none})
+(custom-set-face! "@keyword.function" []
                   {:fg palette.red :bg palette.none})
 
 (custom-set-face! "@keyword.operator" [:italic]
@@ -883,5 +883,11 @@
 ;; flash
 
 (custom-set-face! :FlashLabel [:bold] {:fg palette.magenta :bg palette.bg})
+
+;; Orgmode
+(custom-set-face! "@org.keyword.todo" [] {:fg palette.red :bg palette.bg})
+(custom-set-face! "@org.keyword.todo" [] {:fg palette.red :bg palette.bg})
+(custom-set-face! "@org.headline.level2" [] {:fg palette.red :bg palette.bg})
+
 
 {: palette}

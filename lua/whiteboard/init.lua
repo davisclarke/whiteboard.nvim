@@ -4,7 +4,7 @@ else
 end
 vim.g["colors_name"] = "whiteboard"
 vim.o["termguicolors"] = true
-local palette = {bg = "#ffffff", base01 = "#e0e0e0", base02 = "#cecece", fg = "#000000", base04 = "#37474F", base05 = "#808080", base06 = "#525252", cyan = "#267459", magenta = "#A02a9a", red = "#A80011", yellow = "#864f00", blue = "#0f428e", purple = "#5a1083", green = "#107300", orange = "#d65100", pink = "#d446bb", blend = "#FAFAFA", none = "NONE"}
+local palette = {bg = "#f5f0e0", base01 = "#d5c9b9", base02 = "#b5a999", fg = "#000000", base04 = "#554939", base05 = "#554939", base06 = "#525252", cyan = "#267459", magenta = "#A02a9a", red = "#A80011", yellow = "#986908", blue = "#0f428e", purple = "#5a1083", green = "#107300", orange = "#d65100", pink = "#d446bb", blend = "#d5c9b9", none = "NONE"}
 vim.g["terminal_color_0"] = palette.base01
 vim.g["terminal_color_1"] = palette.red
 vim.g["terminal_color_2"] = palette.green
@@ -149,7 +149,7 @@ vim.api.nvim_set_hl(0, "Search", {fg = palette.base01, bg = palette.magenta})
 vim.api.nvim_set_hl(0, "TabLine", {link = "StatusLineNC"})
 vim.api.nvim_set_hl(0, "TabLineFill", {link = "TabLine"})
 vim.api.nvim_set_hl(0, "TabLineSel", {link = "StatusLine"})
-vim.api.nvim_set_hl(0, "Title", {fg = palette.base04, bg = palette.none})
+vim.api.nvim_set_hl(0, "Title", {fg = palette.green, bg = palette.none, bold = true})
 vim.api.nvim_set_hl(0, "VertSplit", {fg = palette.base01, bg = palette.bg})
 vim.api.nvim_set_hl(0, "WinSeparator", {fg = palette.base01, bg = palette.bg})
 vim.api.nvim_set_hl(0, "Boolean", {fg = palette.magenta, bg = palette.none, italic = true})
@@ -166,7 +166,7 @@ vim.api.nvim_set_hl(0, "Float", {link = "Number"})
 vim.api.nvim_set_hl(0, "Function", {fg = palette.green, bg = palette.none})
 vim.api.nvim_set_hl(0, "Identifier", {fg = palette.base04, bg = palette.none})
 vim.api.nvim_set_hl(0, "Include", {fg = palette.red, bg = palette.none})
-vim.api.nvim_set_hl(0, "Keyword", {fg = palette.orange, bg = palette.none, bold = true})
+vim.api.nvim_set_hl(0, "Keyword", {fg = palette.red, bg = palette.none})
 vim.api.nvim_set_hl(0, "Label", {fg = palette.red, bg = palette.none})
 vim.api.nvim_set_hl(0, "Number", {fg = palette.magenta, bg = palette.none})
 vim.api.nvim_set_hl(0, "Operator", {fg = palette.orange, bg = palette.none, bold = true})
@@ -268,8 +268,8 @@ vim.api.nvim_set_hl(0, "@function.macro", {fg = palette.yellow, bg = palette.non
 vim.api.nvim_set_hl(0, "@method", {fg = palette.cyan, bg = palette.none})
 vim.api.nvim_set_hl(0, "@constructor", {fg = palette.red, bg = palette.none})
 vim.api.nvim_set_hl(0, "@parameter", {fg = palette.fg, bg = palette.none, bold = true})
-vim.api.nvim_set_hl(0, "@keyword", {fg = palette.red, bg = palette.none, bold = true})
-vim.api.nvim_set_hl(0, "@keyword.function", {fg = palette.red, bg = palette.none, bold = true})
+vim.api.nvim_set_hl(0, "@keyword", {fg = palette.red, bg = palette.none})
+vim.api.nvim_set_hl(0, "@keyword.function", {fg = palette.red, bg = palette.none})
 vim.api.nvim_set_hl(0, "@keyword.operator", {fg = palette.orange, bg = palette.none, italic = true})
 vim.api.nvim_set_hl(0, "@conditional", {fg = palette.red, bg = palette.none})
 vim.api.nvim_set_hl(0, "@repeat", {fg = palette.red, bg = palette.none})
@@ -412,4 +412,7 @@ vim.api.nvim_set_hl(0, "VimwikiList", {link = "markdownListMarker"})
 vim.api.nvim_set_hl(0, "VimwikiLink", {link = "markdownUrl"})
 vim.api.nvim_set_hl(0, "VimwikiCode", {link = "markdownCode"})
 vim.api.nvim_set_hl(0, "FlashLabel", {fg = palette.magenta, bg = palette.bg, bold = true})
+vim.api.nvim_set_hl(0, "@org.keyword.todo", {fg = palette.red, bg = palette.bg})
+vim.api.nvim_set_hl(0, "@org.keyword.todo", {fg = palette.red, bg = palette.bg})
+vim.api.nvim_set_hl(0, "@org.headline.level2", {fg = palette.red, bg = palette.bg})
 return {palette = palette}

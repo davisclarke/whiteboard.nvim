@@ -3,7 +3,7 @@
 (local colors {:color0 whiteboard.bg
                :color1 whiteboard.yellow
                :color2 whiteboard.magenta
-               :color3 whiteboard.bg
+               :color3 whiteboard.base01
                :color6 whiteboard.fg
                :color7 whiteboard.red
                :color8 whiteboard.green
